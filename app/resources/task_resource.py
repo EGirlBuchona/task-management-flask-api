@@ -1,8 +1,6 @@
 from flask_restful import Resource
-from flask import request
-from app import db
-from app.models.task import Task
-
+from flask import request, jsonify
+from ..models.task import Task, db
 
 class TaskListResource(Resource):
     def get(self):
